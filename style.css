@@ -1045,21 +1045,26 @@ section#contact > .section-inner > p {
   }
 }
 /* ======================== Mobile Optimizations ======================== */
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
   /* Header & Navigation */
   header {
     padding: 2rem 1rem;
+    text-align: center;
   }
+
   nav {
-    top: 1rem;
-    right: 1rem;
+    position: static; /* fixed overlapping issue */
+    margin-top: 1rem;
+    text-align: center;
   }
+
   nav ul {
     flex-direction: column;
     gap: 1rem;
     background: rgba(0,0,0,0.5);
     padding: 1rem;
     border-radius: 12px;
+    display: inline-block; /* shrink background to links */
   }
 
   /* Profile Section */
